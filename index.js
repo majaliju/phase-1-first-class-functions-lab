@@ -21,13 +21,21 @@ function createFareMultiplier(initial){
     }
 }
 
-// v1
-const fareDoubler = function(){
-    return (2 * createFareMultiplier(fare));
+const fareDoubler = createFareMultiplier(2);
+
+const fareTripler = createFareMultiplier(3);
+
+function selectDifferentDrivers(drivers, selectingDrivers){
+    return selectingDrivers;
 }
 
-/* v2 
-const fareDoubler = function(){
-    const doubledFare = 2 * createFareMultiplier(fare);
-    return doubledFare;
+
+/* more elaborate way to test if selectingDrivers is [0] or [1] 
+function selectDifferentDrivers(drivers, selectingDrivers){
+    if (drivers.slice(0,2) === selectingDrivers[0]){
+        return selectingDrivers[0];
+    }
+    else if (drivers.slice(-2)=== selectingDrivers[1]){
+        return selectingDrivers[1];
+    }
 } */
